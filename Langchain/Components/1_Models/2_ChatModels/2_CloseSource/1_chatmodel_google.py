@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-model = ChatGoogleGenerativeAI(model="gemini-3.8-flash")
-result = model.invoke("What is the current condition of Pakistan Cricket Team? Give a deep analysis", temperature=0.3)
+model = ChatGoogleGenerativeAI(model="gemini-flash-latest")
+result = model.invoke("What is the current condition of Pakistan Cricket Team? Give a deep analysis")
 print(result)
 print(result.content)
