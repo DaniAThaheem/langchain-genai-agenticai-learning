@@ -1,7 +1,7 @@
 from langchain_huggingface import ChatHuggingFace, HuggingFacePipeline
 import os
 
-os.environ["HF_HOME"] = "D:\HF_Cache"
+os.environ["HF_HOME"] = r"D:\HF_Cache\embedding_model"
 llm = HuggingFacePipeline.from_model_id(
     model_id="meta-llama/Llama-3.1-8B-Instruct"
 )
