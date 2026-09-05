@@ -39,5 +39,8 @@ prompt = template.invoke({
     })
 
 if st.button("Summarize"):
+    # chain = template | model
+    # result = chain.invoke(prompt)
+
     result = model.invoke(prompt)
     st.write(result)
