@@ -3,6 +3,10 @@ from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
+
+
+#Here to get the content how to maximize the chances and and requirements to get Erasmus Mundis
+
 load_dotenv()
 
 model = ChatGoogleGenerativeAI(model="gemini-flash-latest")
