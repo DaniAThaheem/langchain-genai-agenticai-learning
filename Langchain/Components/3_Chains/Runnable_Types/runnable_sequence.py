@@ -15,7 +15,7 @@ template = PromptTemplate(
 
 parser = StrOutputParser()
 
-chain = RunnableSequence(model, template, parser)
+chain = RunnableSequence(template, model, parser)
 
 result = chain.invoke({"technology": "AI"})
 
