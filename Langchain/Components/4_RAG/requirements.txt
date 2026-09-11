@@ -33,3 +33,5 @@ pydantic
 
 # Doc Loader Libraries
 pypdf
+requests
+beautifulsoup4
