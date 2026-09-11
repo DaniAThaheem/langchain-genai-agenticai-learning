@@ -1,0 +1,13 @@
+Session #,Date,Start Time,End Time,Flow Type,Category / Product Selected,Problem Description / Product,Picture Uploaded,Name,Region,City,Address,Order Confirmed (Yes/No),Timeout Occurred?,Invalid Response Occurred?,Status
+SES-A,7/20/2026,2:39 PM,2:43 PM,Main Menu,-,-,-,-,-,-,-,-,Yes (2 retries exhausted),No,Abandoned - Timed Out
+SES-B,7/21/2026,11:56 AM,11:59 AM,Order Aquafina,Aquafina 18.9L - With Bottle,"Product selected via list, Qty 1, Price PKR 1610",N/A (not part of Order flow),Danish Abbas,Multan,Multan City,Makhdoom Rasheed Multan,No (user declined),No,No,Completed (Order Declined)
+SES-C,7/22/2026,8:17 AM,8:19 AM,Order Aquafina,Aquafina 18.9L - With Bottle,"Product selected via list, Qty 1, Price PKR 1610",N/A,Danish Abbas,Multan,Multan City,Makhdoom Rasheed Multan,No (user declined),No,No,Completed (Order Declined)
+SES-D,7/22/2026,8:19 AM,8:24 AM,Register Complaint,1 - Delivery Complain,Order not delivered,Not reached (timed out),Not reached,Not reached,Not reached,Not reached,N/A,"Yes (1 retry, then exhausted)",No,Abandoned - Timed Out
+SES-E,7/22/2026,9:05 AM,9:07 AM,Register Complaint,2 - Service/Behaviour Complain,Order not delivered,Yes (2 images),Danish,Multan,Multan City,Makhdoom Rasheed Multan,N/A,No,No,Completed
+SES-F,7/22/2026,9:14 AM,9:17 AM,Register Complaint,3 - Water Quality Complain,Water doesn't have the same taste,Yes (2 images),Danish,Multan,Multan City,Makhdoom Rasheed Multan,N/A,No,No,Completed
+SES-G,7/22/2026,2:13 PM,2:16 PM,Register Complaint,4 - Bottle Quality Complain,The bottle was leaked when delivered,Yes (2 images),Danish Abbas,Multan,Multan City,Stadium Chowk Vehari Road Multan,N/A,No,Yes (at City step),Completed
+SES-H,7/22/2026,2:16 PM,2:18 PM,Register Complaint,5 - Billing Complain,Wrong billing,Yes (2 images),Muhammad Tanveer,Multan,Multan City,Babaer Chowk Near Kot Rabanawaz,N/A,No,No,Completed
+SES-I,7/22/2026,2:19 PM,2:21 PM,Register Complaint,6 - SMS Alert Complain,Daily SMS result,Yes (2 images),Rehan Khan,Multan,Multan City,Gulgahst Colony Multan,N/A,No,Yes (at City step),Completed
+SES-J,7/22/2026,2:22 PM,2:24 PM,Register Complaint,7 - Address/Phone Number Change Request,Change phone number,Yes (2 images),Aamir Abbas,Multan,Multan City,11 Kassi Multan,N/A,No,No,Completed
+SES-K,7/22/2026,2:25 PM,2:28 PM,Register Complaint,8 - Change of day Request,Change the day of delivery for Makhdoom Rasheed route,Yes (2 images),Asim Manzoor,Multan,Multan City,Pul Naubahar,N/A,No,Yes (at Region step),Completed
+SES-L,7/22/2026,2:28 PM,2:30 PM,Register Complaint,9 - Others,Nothing,Yes (2 images),Danish Abbas,Multan,Multan City,Makhdoom Rasheed Multan,N/A,No,No,Completed
