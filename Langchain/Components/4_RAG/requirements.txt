@@ -30,3 +30,6 @@ scikit-learn
 
 # Data Validation
 pydantic
+
+# Doc Loader Libraries
+pypdf
