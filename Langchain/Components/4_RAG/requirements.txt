@@ -27,7 +27,6 @@ streamlit
 # Machine Learning Utilities
 numpy
 scikit-learn
-pytorch
 
 # Data Validation
 pydantic
@@ -45,3 +44,7 @@ tiktoken
 torch
 torchvision
 torchaudio
+
+
+# Vector Store
+langchain-chroma
