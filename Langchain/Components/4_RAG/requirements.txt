@@ -27,6 +27,7 @@ streamlit
 # Machine Learning Utilities
 numpy
 scikit-learn
+pytorch
 
 # Data Validation
 pydantic
@@ -35,3 +36,11 @@ pydantic
 pypdf
 requests
 beautifulsoup4
+
+# Text Splitters Libraries
+langchain-text-splitters
+transformers
+tiktoken
+torch
+torchvision
+torchaudio
