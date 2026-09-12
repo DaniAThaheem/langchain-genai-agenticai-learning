@@ -39,6 +39,7 @@ beautifulsoup4
 
 # Text Splitters Libraries
 langchain-text-splitters
+langchain_experimental
 transformers
 tiktoken
 torch
