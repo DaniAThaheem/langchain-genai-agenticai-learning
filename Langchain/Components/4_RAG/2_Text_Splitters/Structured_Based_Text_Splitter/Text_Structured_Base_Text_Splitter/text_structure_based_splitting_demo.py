@@ -1,0 +1,25 @@
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+
+text = """What is the goal?
+The goal is to Master in AI by abroad
+How I will achieve as there are some milestones
+Milestone 1: Make a passport, Total cost about 8500, status = done
+Milestone 2: Prepare for ielts, Total cost about 100000, status = in progress
+Milestone 3: Document attestation, cost about 20000, status = pending
+Milestone 4: Research and Projects, cost about (hardwork persistence, time), status = pending
+Milestone 5: Hardwork and Prayers
+Milestone 6: Application
+Milestone 7: Interview
+Milestone 8: Selection
+Milestone 9: Visa and Ticket cost
+Milestone 10: Arrival and Adjustment with culture"""
+
+
+splitter = RecursiveCharacterTextSplitter(
+    chunk_size = 100,
+    chunk_overlap = 0
+)
+
+result = splitter.split_text(text=text)
+
+print(result)
