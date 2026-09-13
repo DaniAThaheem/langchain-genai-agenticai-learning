@@ -48,3 +48,7 @@ torchaudio
 
 # Vector Store
 langchain-chroma
+faiss-cpu
+
+# Retrievers
+wikipedia
