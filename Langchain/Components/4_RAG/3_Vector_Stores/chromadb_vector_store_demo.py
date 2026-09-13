@@ -2,6 +2,7 @@ from langchain_chroma import Chroma
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from dotenv import load_dotenv
 from langchain_core.documents import Document
+from pathlib import Path
 
 load_dotenv()
 
@@ -47,7 +48,7 @@ doc_8 = Document(
 
 chromadb = Chroma(
             embedding_function=GoogleGenerativeAIEmbeddings(model="gemini-embedding-2"),
-            persist_directory= "chroma_db",
+            persist_directory=str(Path(__file__).resolve().parent.parent / "chroma_db"),
             collection_name="sample"
         )
 
@@ -70,7 +71,7 @@ while True:
             ids = chromadb.add_documents(docs)
             print(ids)
         case 2:
-            info_dict =chromadb.get(include=["ids", "documents", "embeddings", "metadata"])
+            info_dict = chromadb.get(include=["documents", "embeddings", "metadatas"])
             print(info_dict)
             
         case 3:
@@ -97,7 +98,7 @@ while True:
         case 6:
             id_to_delete = input("Enter id to delete that document")
             chromadb.delete(ids=[id_to_delete])
-            remaining_data=chromadb.get(["ids", "documents", "embeddings", "metadata"])
+            remaining_data = chromadb.get(include=["documents", "embeddings", "metadatas"])
             print(remaining_data)
 
         case 7:
