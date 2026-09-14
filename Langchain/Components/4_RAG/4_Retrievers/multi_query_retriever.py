@@ -29,9 +29,9 @@ doc_4 = Document(
     metadata={"app": "MX Player"}
 )
 
-embedding_model = GoogleGenerativeAIEmbeddings(model="")
+embedding_model = GoogleGenerativeAIEmbeddings(model="gemini-embedding-2")
 
-model = ChatGoogleGenerativeAI(model="")
+model = ChatGoogleGenerativeAI(model="gemini-flash-latest")
 
 docs = [doc_1, doc_2, doc_3, doc_4]
 

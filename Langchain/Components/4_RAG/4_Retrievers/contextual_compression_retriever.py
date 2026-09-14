@@ -20,24 +20,22 @@ doc_3 = Document(
 docs = [doc_1, doc_3]
 
 
-model = ChatGoogleGenerativeAI(model = "")
+model = ChatGoogleGenerativeAI(model="gemini-flash-latest")
 
-embedding_model = GoogleGenerativeAIEmbeddings(model= "")
+embedding_model = GoogleGenerativeAIEmbeddings(model="gemini-embedding-2")
 
-compressor = LLMChainExtractor(model)
+compressor = LLMChainExtractor.from_llm(model)
 
 faiss_db = FAISS.from_documents(
     documents=docs,
-    embedding=embedding_model
+    embedding=embedding_model,
 )
 
-retriever = faiss_db.as_retriever(
-    search_kwargs={"k":2}
-)
+retriever = faiss_db.as_retriever(search_kwargs={"k": 2})
 
 contextual_retriever = ContextualCompressionRetriever(
     base_retriever=retriever,
-    base_compressor=compressor
+    base_compressor=compressor,
 )
 
 query = "Give info about VLC player"
@@ -46,9 +44,3 @@ docs = contextual_retriever.invoke(query)
 
 for doc in docs:
     print(doc)
-
-
-    
-
-
-ContextualCompressionRetriever()

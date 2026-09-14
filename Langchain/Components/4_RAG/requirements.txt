@@ -52,3 +52,6 @@ faiss-cpu
 
 # Retrievers
 wikipedia
+
+# YT API
+youtube-transcript-api

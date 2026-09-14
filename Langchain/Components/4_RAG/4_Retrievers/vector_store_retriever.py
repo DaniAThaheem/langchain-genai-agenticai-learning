@@ -5,7 +5,7 @@ from langchain_core.documents import Document
 
 load_dotenv()
 
-model = GoogleGenerativeAIEmbeddings(model="")
+model = GoogleGenerativeAIEmbeddings(model="gemini-embedding-2")
 
 doc_1 = Document(
     page_content="""Shadab Khan is a Pakistani all-rounder and the captain of Islamabad United. He is a right-handed batter and right-arm leg-spin bowler known for his attacking style. Shadab has been one of the important players in Islamabad United's PSL campaigns. His leadership, batting, and leg-spin bowling make him a key player for the team.""",
