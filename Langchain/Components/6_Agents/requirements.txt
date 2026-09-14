@@ -1,0 +1,60 @@
+# LangChain Core
+langchain
+langchain-core
+langchain_community
+
+# OpenAI Integration
+langchain-openai
+openai
+
+# Anthropic Integration
+langchain-anthropic
+
+# Google Gemini (PaLM) Integration
+langchain-google-genai
+google-generativeai
+
+# Hugging Face Integration
+langchain-huggingface
+huggingface-hub
+
+# Environment Variable Management
+python-dotenv
+
+# UI Development
+streamlit
+
+# Machine Learning Utilities
+numpy
+scikit-learn
+
+# Data Validation
+pydantic
+
+# Doc Loader Libraries
+pypdf
+requests
+beautifulsoup4
+
+# Text Splitters Libraries
+langchain-text-splitters
+langchain_experimental
+transformers
+tiktoken
+torch
+torchvision
+torchaudio
+
+
+# Vector Store
+langchain-chroma
+faiss-cpu
+
+# Retrievers
+wikipedia
+
+# YT API
+youtube-transcript-api
+
+# Tools Requirements
+duckduckgo-search
