@@ -55,3 +55,6 @@ wikipedia
 
 # YT API
 youtube-transcript-api
+
+# Tools Requirements
+duckduckgo-search
