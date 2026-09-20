@@ -39,7 +39,7 @@ def generate_score(state:CurrentState) -> CurrentState:
 
     prompt= f'You are a professional essay checker. You check essays written to crack IELTS exams with high band. For example you checck the mind map and metrics, outlines against the written essay that score these out of 9. Give the answer in floating point just like 6.0 or 4.0 or 7.5 etc. Now you are checking essay for a person who is tring to learn how to crack the IELTS examination in writing part wiht high band. Do not try to give simple answers or people pleasing answers just evaluate the score that actually help and matters. Now generate score for topic with tricks {outline} and essay {essay} out of 9.0. '
 
-    structured_output_model =model.output_schema(ScoreSchema)
+    structured_output_model =model.with_structured_output(ScoreSchema)
 
     state["score"] = structured_output_model.invoke(prompt).content[0]['text']
     return state
