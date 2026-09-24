@@ -62,3 +62,6 @@ ddgs
 
 # LangGraph
 langgraph
+
+#Database
+langgraph-checkpoint-sqlite
