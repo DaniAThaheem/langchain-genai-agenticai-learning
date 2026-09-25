@@ -63,5 +63,8 @@ ddgs
 # LangGraph
 langgraph
 
-#Database
+# Database
 langgraph-checkpoint-sqlite
+
+# Notebook
+notebook
