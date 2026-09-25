@@ -58,3 +58,6 @@ youtube-transcript-api
 
 # Tools Requirements
 duckduckgo-search
+
+# Jupyter Notebook
+notebook
