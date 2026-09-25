@@ -5,7 +5,8 @@ from langchain_core.output_parsers import StrOutputParser
 
 load_dotenv()
 
-llm = ChatGoogleGenerativeAI(model="gemini-flash-latest")
+llm1 = ChatGoogleGenerativeAI(model="gemini-flash-latest")
+llm2 = ChatGoogleGenerativeAI(model="gemini-flash-latest")
 
 prompt1 = PromptTemplate(
     template="You are a professional writter about the Growth in Artifical Intelligence field. Write a long article meaningful about the topic {topic}.",
@@ -18,7 +19,7 @@ prompt2 = PromptTemplate(
 
 parser = StrOutputParser()
 
-chain = prompt1 | llm | parser | prompt2 | llm | parser
+chain = prompt1 | llm1 | parser | prompt2 | llm2 | parser
 
 result = chain.invoke({"topic":"Masters in Artifical Intelligence"})
 
