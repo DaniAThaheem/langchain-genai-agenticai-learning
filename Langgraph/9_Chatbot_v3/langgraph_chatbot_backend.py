@@ -15,7 +15,7 @@ class ChatState(TypedDict):
 def chat(state:ChatState):
     messages = state["messages"]
     response = model.invoke(messages)
-    return {"message": messages[response]}
+    return {"messages": [response]}
 
 
 graph = StateGraph(ChatState)
