@@ -16,6 +16,19 @@ def load_conversation(thread_id):
         }
     }).values["messages"]
 
+def extract_text(content):
+    if isinstance(content, str):
+        return content
+    if isinstance(content, list):
+        return "".join(
+            block["text"]
+            for block in content
+            if isinstance(block, dict)
+            and block.get("type") == "text"
+            and isinstance(block.get("text"), str)
+        )
+    return ""
+
 def genThreadId():
     return uuid.uuid4()
 
@@ -58,10 +71,10 @@ for thread_id in st.session_state["thread_list"][::-1]:
         for message in messages:
             if isinstance(message, HumanMessage):
                 role= "user"
-                msg_history.append({"role":role, "content":message.content})
+                msg_history.append({"role":role, "content":extract_text(message.content)})
             else:
                 role= "assistant"
-                msg_history.append({"role":role, "content":message.content})
+                msg_history.append({"role":role, "content":extract_text(message.content)})
         st.session_state["message_history"] = msg_history
 
 
@@ -77,7 +90,11 @@ if user_input:
 
     with st.chat_message("assistant"):
         ai_output = st.write_stream(
-            message_chunk.content for message_chunk,  in workflow.stream(init_state, config=config, stream_mode="messages")
+            text
+            for message_chunk, _ in workflow.stream(
+                init_state, config=config, stream_mode="messages"
+            )
+            if (text := extract_text(message_chunk.content))
         )
         
         st.session_state["message_history"].append({"role":"assistant", "content":ai_output})

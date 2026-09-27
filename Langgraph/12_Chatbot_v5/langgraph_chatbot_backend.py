@@ -1,5 +1,5 @@
 from langgraph.graph import StateGraph, START, END, add_messages
-from langgraph.checkpoint.memory import MemorySaver
+from langgraph.checkpoint.sqlite import SqliteSaver
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage, BaseMessage
@@ -16,7 +16,7 @@ class ChatState(TypedDict):
 def chat(state:ChatState):
     messages = state["messages"]
     response = model.invoke(messages)
-    return {"message": messages[response]}
+    return {"messages": [response]}
 
 
 graph = StateGraph(ChatState)
@@ -28,7 +28,8 @@ graph.add_edge("chat", END)
 
 conn = sqlite3.connect(database="chat.db", check_same_thread=False)
 
-checkpointer = MemorySaver()
+checkpointer = SqliteSaver(conn)
+checkpointer.setup()
 
 workflow = graph.compile(checkpointer=checkpointer)
 
