@@ -1,5 +1,5 @@
 [project]
-name = "mcp"
+name = "mcp-calculator"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -8,11 +8,13 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
-    "fastmcp>=2.3.0rc1",
+    "fastmcp>=2.3.0,<3",
+    "mcp>=1,<2",
+    "uvicorn>=0.34.0",
 ]
 
 [project.scripts]
-mcp = "mcp:main"
+mcp = "mcp_calculator:main"
 
 [build-system]
 requires = ["uv_build>=0.12.21,<0.13.0"]
