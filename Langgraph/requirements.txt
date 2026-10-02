@@ -71,3 +71,6 @@ notebook
 
 # Langsmith
 langsmith
+
+# MCP
+langchain-mcp-adapters
