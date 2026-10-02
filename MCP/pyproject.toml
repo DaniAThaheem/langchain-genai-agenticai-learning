@@ -14,7 +14,7 @@ dependencies = [
 ]
 
 [project.scripts]
-mcp = "Remote_Server.main:main"
+mcp = "Remote_Server.server:main"
 
 [build-system]
 requires = ["uv_build>=0.12.21,<0.13.0"]
